@@ -12,6 +12,6 @@ app.use(cors);
 app.use(v1Router); //所有/v1开头路径的请求 都转发给v1Router.
 
 app.listen(PORT, () => {
-    // console.log(`Sever start # ${PORT} .`)
-    console.log("Success")
+    console.log(`Sever start @ Port #${PORT} !!!`)
+    // console.log("Success")
 });  

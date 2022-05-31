@@ -17,7 +17,7 @@ const getAllTasks = (req,res) => {
     } 
     res.json(my_tasks);
     return;
-}
+};
 
 const getTaskById = (req,res) => {
     const { id } = req.params;
