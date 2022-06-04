@@ -7,7 +7,7 @@ class Task_format {
         this.done = false;
     }
 };
-
+//get    All
 const getAllTasks = (req,res) => {
     const { description } = req.query;
     if (description) {
@@ -18,7 +18,7 @@ const getAllTasks = (req,res) => {
     res.json(my_tasks);
     return;
 };
-
+//get
 const getTaskById = (req,res) => {
     const { id } = req.params;
     const task = my_tasks.find((e) => e.id === Number(id));
@@ -28,7 +28,7 @@ const getTaskById = (req,res) => {
     }
     res.json(task);
 };
-
+//create
 const createNewTask = (req,res) => {
     const { description } = req.body;
     const newTask = new Task_format(id++, description);
@@ -36,7 +36,7 @@ const createNewTask = (req,res) => {
     res.status(201).json(newTask);
     return;
 };
-
+//update
 const updateTaskById = (req,res) => {
     const { id } = req.params;
     const {description, done} = req.body;
@@ -54,7 +54,7 @@ const updateTaskById = (req,res) => {
     res.json(task)
     return;
 };
-
+//delete
 const deleteTaskById = (req,res) => {
     const { id } = req.params;
     const index = my_tasks.findIndex((i) => i.id === Number(id));
